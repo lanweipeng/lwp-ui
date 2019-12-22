@@ -6,7 +6,6 @@
 </template>
 <script>
 import Iconfont from './Iconfont'
-
   export default {
     props:['type', 'icon', 'position'],
     data: function(){
@@ -21,7 +20,7 @@ import Iconfont from './Iconfont'
   border: 1px solid #ccc;
   display: inline-block;
   border-radius: 4px;
-  min-width: 100px;
+  padding: 0 1em;
   text-align: center;
   padding: 0 10px;
   line-height: 28px;
@@ -37,9 +36,7 @@ import Iconfont from './Iconfont'
   .iconfont{
    display: inline;
    vertical-align: middle;
-
   }
-  
 }
 .right{
     .iconfont{

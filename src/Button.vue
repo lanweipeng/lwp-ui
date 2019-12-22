@@ -1,22 +1,21 @@
 <template>
-<div>
-    <svg class='svgClass'><use xlink:href='#icondown' class='down'></use></svg>
-
-  <div :class="type + ' lwp-button '">
-    <slot></slot>
-  </div>
+  <div :class="type + ' lwp-button '+position">
+    <iconfont :type='icon' v-if="icon" :class="'iconfont '"></iconfont>
+    <slot class="content"></slot>
   </div>
 </template>
 <script>
+import Iconfont from './Iconfont'
+
   export default {
-    props:['type'],
+    props:['type', 'icon', 'position'],
     data: function(){
       return {
       }
     }
   }
 </script>
-<style lang='scss'>
+<style lang='less'>
 
 .lwp-button{
   border: 1px solid #ccc;
@@ -31,7 +30,25 @@
   background: #f9f9f9;
   color: #666;
   cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+   vertical-align: middle;
+  align-items: center;
+  .iconfont{
+   display: inline;
+   vertical-align: middle;
+
+  }
+  
 }
+.right{
+    .iconfont{
+      order:2;
+    }
+    .content{
+      order: 1;
+    }
+  }
 .primary{
   background: #f85959;
   color: #fff;

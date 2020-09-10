@@ -9,6 +9,7 @@ module.exports = {
   module: {
     rules: [
       { test: /\.vue$/, use: ['vue-loader'] },
+    {test:/\.js$/,use:['babel-loader']},
       { test: /\.less$/, use: ['style-loader','css-loader','less-loader'] }
     ]
   },

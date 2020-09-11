@@ -1,28 +1,38 @@
 
 
 <script>
+function noop(){}
 export default {
-    props:{
-        currentName:String,
-        panes:Array
-    },
-    created(){
-    },
-render(){
-    const {panes}=this;
-    const tabs=this._l(panes,(pane,index)=>{
-            const tabLabelContent=pane.$slots.label||pane.label;
-return (
-    <div>{tabLabelContent}</div>
-)
+  props: {
+    currentName: String,
+    panes: Array,
+    onTabClick:{
+        type:Function,
+        // default:noop
+    }
+  },
+  created() {},
+  render() {
+    const { panes,onTabClick  } = this;
+    const tabs = this._l(panes, (pane, index) => {
+        let tabName=pane.name||pane.index||index
+      const tabLabelContent = pane.$slots.label || pane.label;
+      return <div class="lwp-tabs__item" on-click={(ev)=>onTabClick(pane,tabName,ev)}>{tabLabelContent}</div>;
     });
-    return (
-<div>{tabs}</div>
-    )
-}
-}
+    return <div class="lwp-tabs__nav">{tabs}</div>;
+  },
+};
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.lwp-tabs__nav {
+  display: flex;
+  .lwp-tabs__item {
+    background-color: red;
+    color: white;
+    width: 160px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
 </style>

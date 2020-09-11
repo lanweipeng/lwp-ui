@@ -23,6 +23,7 @@ export default {
   },
     methods: {
       handleClick(tab, event) {
+        console.log('hhh');
         console.log(tab, event);
       }
     }

@@ -10,7 +10,8 @@ module.exports = {
     rules: [
       { test: /\.vue$/, use: ['vue-loader'] },
     {test:/\.js$/,use:['babel-loader']},
-      { test: /\.less$/, use: ['style-loader','css-loader','less-loader'] }
+      { test: /\.less$/, use: ['style-loader','css-loader','less-loader'] },
+      { test: /\.scss$/, use: ['style-loader','css-loader','sass-loader'] }
     ]
   },
   resolve: {

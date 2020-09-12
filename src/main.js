@@ -5,6 +5,7 @@ import Button from './Button'
 import Tabs from './tabs/tabs'
 import TabPane from './tabs/tab-pane'
 import Row from './components/row/row'
+import Link from './components/link/link.vue'
 // import Button from './components/button/button.vue'
 import './style.less'
 
@@ -14,6 +15,7 @@ Vue.component('lwp-tabs', Tabs)
 Vue.component('lwp-tab-pane', TabPane)
 Vue.component('iconfont', Iconfont)
 Vue.component('lwp-row', Row)
+Vue.component('lwp-link', Link)
 // Vue.component('lwp-button', Button)
 new Vue({
     el:'#app',

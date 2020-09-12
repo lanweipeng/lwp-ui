@@ -56,6 +56,8 @@
   <lwp-button type="warning" disabled>警告按钮</lwp-button>
   <lwp-button type="danger" disabled>危险按钮</lwp-button>
 </lwp-row>
+<!-- link -->
+<lwp-link href="http://www.baidu.com" target="_blank">默认链接</lwp-link>
   </div>
 </template>
 

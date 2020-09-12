@@ -50,8 +50,8 @@ export default {
   },
   watch: {
     activeName(value) {
-      console.log("value");
-      console.log(value);
+    //   console.log("value");
+    //   console.log(value);
     },
   },
   render() {
@@ -78,9 +78,6 @@ export default {
     );
   },
   created() {
-    console.log(this);
-    console.log("this.activeName");
-    console.log(this.activeName);
     if (!this.currentName) {
       this.currentName = "0";
     }

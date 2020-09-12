@@ -4,20 +4,29 @@
 function noop(){}
 export default {
   props: {
-    currentName: String,
+    // currentName: String,
     panes: Array,
     onTabClick:{
         type:Function,
         // default:noop
     }
   },
-  created() {},
+  created() {
+    //   console.log('this.currentName')
+    //   console.log(this.currentName)
+  },
+  watch:{
+      currentName(value){
+console.log(value)
+      }
+  },
   render() {
     const { panes,onTabClick  } = this;
     const tabs = this._l(panes, (pane, index) => {
         let tabName=pane.name||pane.index||index
       const tabLabelContent = pane.$slots.label || pane.label;
-      return <div class="lwp-tabs__item" on-click={(ev)=>onTabClick(pane,tabName,ev)}>{tabLabelContent}</div>;
+      console.log(pane)
+      return <div class={{'lwp-tabs__item':true,'is-active':pane.active}} on-click={(ev)=>onTabClick(pane,tabName,ev)}>{tabLabelContent}</div>;
     });
     return <div class="lwp-tabs__nav">{tabs}</div>;
   },
@@ -33,6 +42,10 @@ export default {
     width: 160px;
     line-height: 30px;
     text-align: center;
+    cursor: pointer;
+  }
+  .is-active{
+      background-color: blue;
   }
 }
 </style>

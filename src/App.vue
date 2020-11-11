@@ -58,6 +58,8 @@
 </lwp-row>
 <!-- link -->
 <lwp-link href="http://www.baidu.com" target="_blank">默认链接</lwp-link>
+ <lwp-dialog :visible.sync="dialogVisible">hh</lwp-dialog>
+ <div @click="changeVisible">click</div>
   </div>
 </template>
 
@@ -66,9 +68,13 @@ export default {
   data() {
     return {
       activeName: "user",
+      dialogVisible:false
     };
   },
     methods: {
+      changeVisible(){
+        this.dialogVisible=!this.dialogVisible;
+      },
       handleClick(tab, event) {
         // console.log('hhh');
         // console.log(tab, event);

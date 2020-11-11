@@ -6,7 +6,11 @@ import Tabs from './components/tabs/tabs'
 import TabPane from './components/tabs/tab-pane'
 import Row from './components/row/row'
 import Link from './components/link/link.vue'
+
 import Tag from './components/tag/tag.vue'
+
+import Dialog from './dialog/index.vue'
+
 // import Button from './components/button/button.vue'
 // import './style.scss'
 import './static/main.scss'
@@ -17,7 +21,11 @@ Vue.component('lwp-tab-pane', TabPane)
 Vue.component('iconfont', Iconfont)
 Vue.component('lwp-row', Row)
 Vue.component('lwp-link', Link)
+
 Vue.component('lwp-tag', Tag)
+
+Vue.component('lwp-dialog',Dialog)
+
 // Vue.component('lwp-button', Button)
 import showdown from 'showdown'// 引入md文件
  

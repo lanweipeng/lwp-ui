@@ -8,9 +8,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.md$/,
+        use: [
+           { loader: 'html-loader' },
+           { loader: 'markdown-loader', options: {} }
+        ]
+     },
       { test: /\.vue$/, use: ['vue-loader'] },
     {test:/\.js$/,use:['babel-loader']},
-      { test: /\.less$/, use: ['style-loader','css-loader','less-loader'] },
       { test: /\.scss$/, use: ['style-loader','css-loader','sass-loader'] }
     ]
   },

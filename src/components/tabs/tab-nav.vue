@@ -33,19 +33,19 @@ console.log(value)
 };
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .lwp-tabs__nav {
   display: flex;
   .lwp-tabs__item {
-    background-color: red;
-    color: white;
+    // background-color: red;
+    color: black;
     width: 160px;
     line-height: 30px;
     text-align: center;
     cursor: pointer;
   }
   .is-active{
-      background-color: blue;
+      border-bottom: 1px solid #1989FA;
   }
 }
 </style>

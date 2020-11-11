@@ -1,0 +1,25 @@
+.demo-block{
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  .source{
+    padding: 24px;
+  }
+  .meta{
+    background-color: #fafafa;
+    border-top: 1px solid #ccc;
+    .description{
+      background-color: #fff;
+      color: #666;
+      margin: 10px;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  }
+  .demo-block-control{
+    border-top: 1px solid #ccc;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+  }
+}

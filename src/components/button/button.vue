@@ -9,5 +9,5 @@ return {
 },created(){},methods:{},components:{}
 }
 </script>
-<style lang='less' scoped>
+<style lang='scss' scoped>
 </style>

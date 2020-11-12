@@ -6,7 +6,6 @@
     str='
 
     '
-    info='b'
     >
     <lwp-tag
   v-for="tag in tags"
@@ -26,7 +25,8 @@ import CodeTemplate from "../components/code-template/index"
   export default {
     data() {
       return {
-        movaleMd:this.md2html(movaleMd)
+        // movaleMd:this.md2html(movaleMd)
+        movaleMd:movaleMd
       }
     },
     components:{

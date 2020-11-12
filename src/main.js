@@ -36,7 +36,9 @@ Vue.prototype.md2html = (md)=> {
   let html = converter.makeHtml(text);
   return html
 };
+import router from './router'
 new Vue({
     el:'#app',
+    router,
     render:h=>h(App)
 })

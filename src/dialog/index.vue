@@ -32,7 +32,7 @@ export default {
       type: String,
       default: "提示",
     },
-    top:
+    // top:
   },
   computed: {
       style() {

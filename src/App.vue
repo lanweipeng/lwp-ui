@@ -5,7 +5,8 @@
     <lwp-button icon="up" type="primary" position="right">今日头条</lwp-button>
     <!-- tabs -->
    <!-- <tabs></tabs>  -->
-   <tag></tag>
+   <!-- <tag></tag> -->
+   
     <!-- row -->
     <lwp-row>
       <!-- <lwp-col>hh</lwp-col> -->
@@ -56,7 +57,7 @@
 <lwp-link href="http://www.baidu.com" target="_blank">默认链接</lwp-link>
  <lwp-dialog :visible.sync="dialogVisible">hh</lwp-dialog>
  <div @click="changeVisible">click</div>
-
+<router-view></router-view>
   </div>
 </template>
 
@@ -74,6 +75,11 @@ activeName: "user",
       
     };
   
+  },
+  created(){
+      console.log(this.$route)
+      console.log('this.$route')
+
   },
     methods: {
       changeVisible(){

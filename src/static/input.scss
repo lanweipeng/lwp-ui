@@ -1,0 +1,23 @@
+@import './mixins/mixins.scss';
+// .lwp-input{
+//   border: 1px solid #ccc;
+//   .lwp-input__inner{
+//     border: 0;
+//   }
+// }
+@include b(input){
+  display: inline-block;
+  font-size: $--font-size-base;
+  @include e(inner){
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: inherit;
+    display: inline-block;
+    background-color: $--input-background-color;
+    background-image: none;
+    line-height: $--input-height;
+    border: $--input-border;
+    border-radius: $--input-border-radius;
+  }
+}

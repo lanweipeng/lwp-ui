@@ -1,20 +1,17 @@
 <template>
   <div>
 <default></default>
-<movable></movable>
-<edit></edit>
+<disabled></disabled>
   </div>
 </template>
 
 <script>
 import Default from './default'
-import Movable from './movable'
-import Edit from './edit'
-
+import Disabled from './disabled'
   export default {
-   components:{
-     Default,Movable,Edit
-   } 
+    components:{
+      Default,Disabled
+    }
   }
 </script>
 

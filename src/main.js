@@ -8,7 +8,11 @@ import Row from './package/row/row'
 import Link from './package/link/link.vue'
 import Tag from './package/tag/tag.vue'
 import Dialog from './package/dialog/index.vue'
+import Input from './package/input/input.vue'
+import VueCompositionAPI from '@vue/composition-api'
 
+import './static/icon/iconfont.scss'
+Vue.use(VueCompositionAPI)
 // import Button from './package/button/button.vue'
 // import './style.scss'
 import './static/main.scss'
@@ -21,7 +25,7 @@ Vue.component('lwp-row', Row)
 Vue.component('lwp-link', Link)
 Vue.component('lwp-tag', Tag)
 Vue.component('lwp-dialog',Dialog)
-
+Vue.component('lwp-input',Input)
 // Vue.component('lwp-button', Button)
 // import showdown from 'showdown'// 引入md文件
  

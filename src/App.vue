@@ -24,6 +24,7 @@
    <router-link :to="{ name: 'tag', params: { userId: 123 }}">tag</router-link>
    <router-link :to="{ name: 'button'}">button</router-link>
    <router-link :to="{ name: 'dialog'}">dialog</router-link>
+   <router-link :to="{ name: 'input'}">input</router-link>
  </aside>
  <div class="content">
 <router-view></router-view>
@@ -36,9 +37,10 @@
 <script>
 import Tabs from './example/tabs'
 import Tag from './example/tag/index'
+import Input from './example/input/index'
 export default {
   components:{
-    Tabs,Tag
+    Tabs,Tag,Input
   },
   data() {
     return {

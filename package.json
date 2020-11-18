@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/lanweipeng/lwp-ui#readme",
   "dependencies": {
-    "vue": "^2.6.11",
+    "@vue/composition-api": "^1.0.0-beta.19",
     "vue-hot-reload-api": "^2.3.4"
   },
   "alias": {

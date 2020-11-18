@@ -1,37 +1,99 @@
-.lwp-tag{
+@import './common/var.scss';
+@import './mixins/mixins.scss';
+@mixin  genTheme($backgroundColorWeight,$borderColorWeight,$fontColorWeight,$hoverColorWeight) {
+  // background-color: ;
+  .lwp-tag__close{
+    color: $--tag-primary-color;
+    &:hover{
+      color: #ff0;
+      background-color: mix($--tag-primary-color,$--color-white,$hoverColorWeight);
+    }
+  }
+  &.lwp-tag--success{
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    color: $--tag-success-color;
+    .lwp-tag__close{
+      color: $--tag-success-color;
+      &:hover{
+        color: $--color-white;
+        background-color: mix($--tag-success-color,$--color-white,$hoverColorWeight);
+      }
+    }
+  }
+  &.lwp-tag--info{
+    background-color: #f4f4f5;
+    border-color: #e9e9eb;
+    color: $--tag-info-color;
+    .lwp-tag__close{
+      color: $--tag-info-color;
+      &:hover{
+        color: $--color-white;;
+        background-color: mix($--tag-info-color,$--color-white,$hoverColorWeight);
+      }
+    }
+  }
+  &.lwp-tag--warning{
+    background-color: #fdf6ec;
+    border-color: #faecd8;
+    color: $--tag-warning-color;
+    .lwp-tag__close{
+      color: $--tag-warning-color;
+      &:hover{
+        color: $--color-white;
+        background-color: mix($--tag-warning-color,$--color-white,$hoverColorWeight);
+      }
+    }
+  }
+  &.lwp-tag--danger{
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: $--tag-danger-color;
+    .lwp-tag__close{
+      color: $--tag-danger-color;
+      &:hover{
+        color: $--color-white;
+        background-color: mix($--tag-danger-color,$--color-white,$hoverColorWeight);
+      }
+    }
+  }
  
-    display: inline-block;
-    height: 32px;
-    padding: 0 10px;
-    line-height: 30px;
-    font-size: 12px;
-    
-    border-radius: 4px;
-    box-sizing: border-box;
-    white-space: nowrap;
-
-    color: #409eff;
+}
+@include b(tag){
+  @include genTheme(10%,10%,100%,100%);
+  display: inline-block;
+  height: 32px;
+  padding: $--tag-padding;
+  line-height: 30px;
+  font-size: $--tag-font-size;
+  border-radius: $--tag-border-radius;
+  box-sizing: border-box;
+  white-space: nowrap;
+  color: $--tag-primary-color;
   border: 1px solid #d9ecff;
   background-color: #ecf5ff;
+  .lwp-icon-close{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    position: relative;
+    border-radius: 50%;
+    top:-1px;
+    right: -5px;
+    text-align: center;
+    cursor: pointer;
+    font-size: $--tag-font-size;
+    &::before{
+display: block;
+    }
+    // hover
+    // &:hover{
+    //   color: #fff;
+    //   background-color: #409eff;
+    // }
+  }
+  
 }
 
-.lwp-tag--success{
-  background-color: #f0f9eb;
-  border-color: #e1f3d8;
-  color: #67c23a;
-}
-.lwp-tag--info{
-  background-color: #f4f4f5;
-  border-color: #e9e9eb;
-  color: #909399;
-}
-.lwp-tag--warning{
-  background-color: #fdf6ec;
-  border-color: #faecd8;
-  color: #e6a23c;
-}
-.lwp-tag--danger{
-  background-color: #fef0f0;
-  border-color: #fde2e2;
-  color: #f56c6c;
-}
+
